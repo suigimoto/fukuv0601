@@ -23,8 +23,25 @@ namespace fukuv0601
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Left = label1.Left + vx;
-            label1.Top = label1.Top + vy;
+            label1.Left += vx;
+            label1.Top += vy;
+
+            if (label1.Left < 0)
+            {
+                vx = 10;
+            }
+            if (label1.Top < 0)
+            {
+                vy = 10;
+            }
+            if (label1.Right > 800)
+            {
+                vx = -10;
+            }
+            if (label1.Bottom > 470)
+            {
+                vy = -10;
+            }
             string t = label1.Text;
             label1.Text = chr;
             chr = t;
@@ -36,6 +53,11 @@ namespace fukuv0601
             label1.Text = "êôñ{Å@èÆãP";
 
 
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }
