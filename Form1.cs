@@ -28,19 +28,19 @@ namespace fukuv0601
 
             if (label1.Left < 0)
             {
-                vx = vx;
+                vx =Math.Abs(vx +(vx/ 10));
             }
             if (label1.Top < 0)
             {
-                vy = vy;
+                vy = Math.Abs(vy + (vy / 10));
             }
-            if (label1.Right > 800)
+            if (label1.Right > ClientSize.Width)
             {
-                vx = -vx;
+                vx = -Math.Abs(vx + (vx / 10));
             }
-            if (label1.Bottom > 470)
+            if (label1.Bottom > ClientSize.Height)
             {
-                vy = -vy;
+                vy = -Math.Abs(vy+ (vy / 10));
             }
             string t = label1.Text;
             label1.Text = chr;

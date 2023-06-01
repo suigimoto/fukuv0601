@@ -33,8 +33,6 @@
             button1 = new Button();
             button2 = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -72,28 +70,16 @@
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.chara1;
-            pictureBox1.Location = new Point(362, 190);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(53, 50);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(784, 461);
-            Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -104,6 +90,5 @@
         private Button button1;
         private Button button2;
         private System.Windows.Forms.Timer timer1;
-        private PictureBox pictureBox1;
     }
 }
